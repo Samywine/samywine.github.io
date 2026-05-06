@@ -1,52 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Samuel Ebosele | Product Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Ebosele | Serverless Fileshare Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f8fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    h3 {
+      color: #0f172a;
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .tag {
+      background: #e0f2fe;
+      padding: 12px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #0369a1;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      background: #ecfdf5;
+      border-left: 5px solid #10b981;
+      padding: 18px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Samuel Ebosele</h1>
-  <h2>Apprentice Product Manager Portfolio</h2>
 
-  <h2>Project: Serverless File Sharing & Real-Time Collaboration Platform</h2>
+  <section class="hero">
+    <h1>Samuel Ebosele</h1>
+    <h2>Serverless Fileshare Portfolio</h2>
+    <p>Product-minded builder creating secure, scalable, real-time cloud applications.</p>
+  </section>
 
-  <h3>The Problem</h3>
-  <p>Many file-sharing tools feel too heavy or slow for quick collaboration. I wanted to build a simpler platform where users can upload files, share them securely, and comment in real time.</p>
+  <main class="container">
 
-  <h3>What I Built</h3>
-  <ul>
-    <li>Secure file upload and download</li>
-    <li>User-based file sharing</li>
-    <li>Real-time comments</li>
-    <li>Authentication and access control</li>
-    <li>Monitoring with CloudWatch</li>
-  </ul>
+    <section class="card">
+      <h3>Project Overview</h3>
+      <p>
+        I built a serverless file sharing and real-time collaboration platform that allows users to securely upload files, share them with specific people, and comment instantly without refreshing the page.
+      </p>
+      <p>
+        The goal was to create a simpler, faster collaboration experience compared to heavy file-sharing tools.
+      </p>
+    </section>
 
-  <h3>Tech Stack</h3>
-  <p>AWS S3, Lambda, DynamoDB, AppSync, Cognito, CloudWatch, Amplify, GitHub CI/CD, GraphQL</p>
+    <section class="card">
+      <h3>The Problem</h3>
+      <p>
+        Many file-sharing tools are either too complex, too slow, or not focused enough on quick collaboration. I wanted to solve that by building a lightweight platform that combines secure file sharing with real-time discussion.
+      </p>
+    </section>
 
-  <h3>Product Decisions</h3>
-  <ul>
-    <li>Used serverless architecture to reduce cost and avoid managing servers.</li>
-    <li>Used AppSync because it supports real-time GraphQL subscriptions.</li>
-    <li>Used S3 presigned URLs to make uploads faster and more efficient.</li>
-  </ul>
+    <section class="card">
+      <h3>Core Features</h3>
+      <div class="grid">
+        <div class="tag">Secure File Upload</div>
+        <div class="tag">Private File Sharing</div>
+        <div class="tag">Real-Time Comments</div>
+        <div class="tag">User Authentication</div>
+        <div class="tag">Cloud Monitoring</div>
+        <div class="tag">CI/CD Deployment</div>
+      </div>
+    </section>
 
-  <h3>Challenges</h3>
-  <ul>
-    <li>Fixed GraphQL subscription issues.</li>
-    <li>Improved access control for sharing files.</li>
-    <li>Used CloudWatch logs to debug errors.</li>
-  </ul>
+    <section class="card">
+      <h3>Technology Stack</h3>
+      <p>
+        AWS S3, Lambda, DynamoDB, AppSync, Cognito, CloudWatch, Amplify, GitHub CI/CD, GraphQL
+      </p>
+    </section>
 
-  <h3>Outcome</h3>
-  <p>I delivered a working MVP from idea to deployment, showing ownership across product thinking, cloud architecture, testing, and iteration.</p>
+    <section class="card">
+      <h3>Product Decisions</h3>
+      <ul>
+        <li>Used serverless architecture to reduce cost and avoid managing servers.</li>
+        <li>Used AppSync because it supports real-time GraphQL subscriptions.</li>
+        <li>Used S3 presigned URLs to make uploads faster and reduce backend processing.</li>
+        <li>Used Cognito to secure access and support user-based file sharing.</li>
+        <li>Used CloudWatch to monitor errors and troubleshoot issues quickly.</li>
+      </ul>
+    </section>
 
-  <h3>What I Would Improve Next</h3>
-  <ul>
-    <li>Add product analytics</li>
-    <li>Improve onboarding</li>
-    <li>Add AI-powered file summaries</li>
-    <li>Create a mobile-first experience</li>
-  </ul>
+    <section class="card">
+      <h3>Challenges I Solved</h3>
+      <ul>
+        <li>Fixed GraphQL subscription issues for real-time comments.</li>
+        <li>Improved the access control model so sharing was secure but still easy to use.</li>
+        <li>Used CloudWatch logs to investigate upload, permission, and Lambda errors.</li>
+        <li>Balanced technical complexity with a simple user experience.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Outcome</h3>
+      <div class="highlight">
+        Delivered a working MVP from idea to deployment, showing ownership across product thinking, cloud architecture, debugging, and iteration.
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>What I Would Improve Next</h3>
+      <ul>
+        <li>Add product analytics to understand user behaviour.</li>
+        <li>Improve onboarding for first-time users.</li>
+        <li>Add AI-powered file summaries.</li>
+        <li>Create a mobile-first experience.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Built by Samuel Ebosele | Product + Cloud Systems
+  </footer>
+
 </body>
 </html>
