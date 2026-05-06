@@ -17,17 +17,18 @@
     .hero {
       background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
-      padding: 70px 20px;
+      padding: 80px 20px;
       text-align: center;
+      animation: fadeDown 0.9s ease-in-out;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 46px;
       margin-bottom: 10px;
     }
 
     .hero h2 {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 400;
       color: #cbd5e1;
     }
@@ -35,11 +36,17 @@
     .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 13px 22px;
+      border-radius: 10px;
       text-decoration: none;
       color: white;
       font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .buttons a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
     .btn-demo {
@@ -47,21 +54,28 @@
     }
 
     .btn-code {
-      background: #1e293b;
+      background: #334155;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     .card {
       background: white;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 28px;
+      border-radius: 18px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      animation: fadeUp 0.8s ease-in-out;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
     }
 
     h3 {
@@ -78,10 +92,43 @@
 
     .tag {
       background: #e0f2fe;
-      padding: 12px 15px;
-      border-radius: 10px;
+      padding: 13px 15px;
+      border-radius: 12px;
       font-weight: bold;
       color: #0369a1;
+      text-align: center;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+
+    .metric-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .metric-box:hover {
+      transform: scale(1.04);
+      background: #ecfdf5;
+    }
+
+    .metric-number {
+      font-size: 34px;
+      font-weight: bold;
+      color: #10b981;
+    }
+
+    .metric-label {
+      margin-top: 8px;
+      color: #475569;
+      font-weight: bold;
     }
 
     ul {
@@ -98,14 +145,56 @@
 
     img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    }
+
+    img:hover {
+      transform: scale(1.01);
     }
 
     .footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       color: #64748b;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .card {
+        padding: 22px;
+      }
     }
   </style>
 </head>
@@ -141,6 +230,31 @@
     </section>
 
     <section class="card">
+      <h3>Product Metrics</h3>
+      <div class="metrics">
+        <div class="metric-box">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">Serverless Architecture</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">6+</div>
+          <div class="metric-label">AWS Services Used</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">0</div>
+          <div class="metric-label">Servers Managed</div>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric-number">Real-Time</div>
+          <div class="metric-label">Live Comment Updates</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
       <h3>The Problem</h3>
       <p>
         Many file-sharing tools are either too complex, too slow, or not focused enough on quick collaboration. I wanted to solve that by building a lightweight platform that combines secure file sharing with real-time discussion.
@@ -149,10 +263,11 @@
 
     <section class="card">
       <h3>Product Screenshots</h3>
+      <p>Upload screenshots named exactly: screenshot1.png, screenshot2.png, and screenshot3.png.</p>
 
-      <img src="screenshot1.png">
-      <img src="screenshot2.png">
-      <img src="screenshot3.png">
+      <img src="screenshot1.png" alt="Product screenshot 1">
+      <img src="screenshot2.png" alt="Product screenshot 2">
+      <img src="screenshot3.png" alt="Product screenshot 3">
     </section>
 
     <section class="card">
